@@ -1,8 +1,7 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/image/logo.png"></image>
-		<view class="border-1px-bottom">
-			<text class="title">环境：{{version}}</text>
+		<view>
+			<text class="title">{{title}}</text>
 		</view>
 	</view>
 </template>
@@ -11,12 +10,10 @@
 	export default {
 		data() {
 			return {
-				title: '首页',
-				version: ''
+				title: '购物车'
 			}
 		},
 		onLoad() {
-			this.version = process.env.VUE_APP_ENV
 		},
 		methods: {
 

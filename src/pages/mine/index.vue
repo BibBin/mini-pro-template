@@ -1,25 +1,39 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/image/logo.png"></image>
-		<view class="border-1px-bottom">
-			<text class="title">环境：{{version}}</text>
+		<view>
+			<text>状态管理demo</text>
+		</view>
+		<view>
+			<text @click="updateUserName" class="title">点击改名：</text>
+			<text class="title">{{info.name}}</text>
 		</view>
 	</view>
 </template>
 
 <script>
+import { mapActions,mapMutations,mapGetters } from 'vuex'
 	export default {
+		computed: {
+			...mapGetters('user', {
+			info: 'userInFnfo',
+			})
+		},
 		data() {
 			return {
-				title: '首页',
-				version: ''
+				title: '个人中心'
 			}
 		},
 		onLoad() {
-			this.version = process.env.VUE_APP_ENV
+			this.$store.dispatch('user/getUserInfo')
 		},
 		methods: {
-
+			...mapMutations('user', [
+				'setUserInfo'
+			]),
+			updateUserName(){
+				this.setUserInfo({name:'酱紫'});
+				this.toast('修改成功！')
+			}
 		}
 	}
 </script>

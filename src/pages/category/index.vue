@@ -1,24 +1,26 @@
 <template>
-	<view class="content">
-		<view>
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+  <view class="content">
+    <view>
+      <text class="title">
+        {{ title }}
+      </text>
+    </view>
+  </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: '分类'
-			}
-		},
-		onLoad() {
-		},
-		methods: {
+export default {
+  data() {
+    return {
+      title: '分类'
+    }
+  },
+  onLoad() {
+  },
+  methods: {
 
-		}
-	}
+  }
+}
 </script>
 
 <style lang="scss" scoped>

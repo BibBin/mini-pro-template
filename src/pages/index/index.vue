@@ -1,34 +1,40 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/image/logo.png"></image>
-		<view class="border-1px-bottom">
-			<text class="title">环境：{{version}}</text>
-		</view>
-	</view>
+  <view class="content">
+    <image
+      class="logo"
+      src="/static/image/logo.png"
+    />
+    <view class="border-1px-bottom">
+      <text class="title">
+        环境：{{ version }}
+      </text>
+    </view>
+  </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: '首页',
-				version: ''
-			}
-		},
-		onLoad() {
-			this.version = process.env.VUE_APP_ENV
-		},
-		methods: {
+export default {
+  data() {
+    return {
+      title: '首页',
+      version: '1111'
+    }
+  },
+  onLoad() {
+    this.version = process.env.NODE_ENV
+    console.log(process.env)
+  },
+  methods: {
 
-		}
-	}
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 	.content {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		 align-items: center;
 		justify-content: center;
 	}
 

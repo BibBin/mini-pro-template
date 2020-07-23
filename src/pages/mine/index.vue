@@ -1,41 +1,49 @@
 <template>
-	<view class="content">
-		<view>
-			<text>状态管理demo</text>
-		</view>
-		<view>
-			<text @click="updateUserName" class="title">点击改名：</text>
-			<text class="title">{{info.name}}</text>
-		</view>
-	</view>
+  <view class="content">
+    <view>
+      <text>状态管理demo</text>
+    </view>
+    <view>
+      <text
+        class="title"
+        @click="updateUserName"
+      >
+        点击改名：
+      </text>
+      <text class="title">
+        {{ info.name }}
+      </text>
+    </view>
+  </view>
 </template>
 
 <script>
 import { mapActions,mapMutations,mapGetters } from 'vuex'
-	export default {
-		computed: {
-			...mapGetters('user', {
-			info: 'userInFnfo',
-			})
-		},
-		data() {
-			return {
-				title: '个人中心'
-			}
-		},
-		onLoad() {
-			this.$store.dispatch('user/getUserInfo')
-		},
-		methods: {
-			...mapMutations('user', [
-				'setUserInfo'
-			]),
-			updateUserName(){
-				this.setUserInfo({name:'酱紫'});
-				this.toast('修改成功！')
-			}
-		}
-	}
+export default {
+  data() {
+    return {
+      title: '个人中心'
+    }
+  },
+  computed: {
+    ...mapGetters('user', {
+      info: 'userInFnfo',
+    })
+  },
+  
+  onLoad() {
+    this.$store.dispatch('user/getUserInfo')
+  },
+  methods: {
+    ...mapMutations('user', [
+      'setUserInfo'
+    ]),
+    updateUserName(){
+      this.setUserInfo({name:'酱紫'})
+      this.toast('修改成功！')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

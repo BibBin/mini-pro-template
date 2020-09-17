@@ -13,9 +13,21 @@
       }
     },
     {
-      "path": "pages/example/form",
+      "path": "pages/example/index",
       "style": {
         "navigationBarTitleText": "demo"
+      }
+    },
+    {
+      "path": "pages/example/form",
+      "style": {
+        "navigationBarTitleText": "表单"
+      }
+    },
+    {
+      "path": "pages/example/qrcodeAndBrcode",
+      "style": {
+        "navigationBarTitleText": "条形码/二维码"
       }
     },
     {
@@ -41,16 +53,10 @@
         "pagePath": "pages/index/index",
         "iconPath": "static/image/tab-home.png",
         "selectedIconPath": "static/image/tab-home-active.png",
-        "text": "首页"
+        "text": "环境设置"
       },
       {
-        "pagePath": "pages/category/index",
-        "iconPath": "static/image/tab-category.png",
-        "selectedIconPath": "static/image/tab-category-active.png",
-        "text": "分类"
-      },
-      {
-        "pagePath": "pages/example/form",
+        "pagePath": "pages/example/index",
         "iconPath": "static/image/tab-cart.png",
         "selectedIconPath": "static/image/tab-cart-active.png",
         "text": "demo"
@@ -59,7 +65,7 @@
         "pagePath": "pages/mine/index",
         "iconPath": "static/image/tab-center.png",
         "selectedIconPath": "static/image/tab-center-active.png",
-        "text": "个人中心"
+        "text": "vuex"
       }
     ]
   }

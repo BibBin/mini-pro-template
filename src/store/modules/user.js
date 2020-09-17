@@ -1,12 +1,13 @@
-
 // initial state
 const state = () => ({
-  info: {}
+  info: {},
+  userInfo: {}
 })
 
 // getters
 const getters = {
-  userInFnfo: (state, getters, rootState) => state.info
+  userInFnfo: (state, getters, rootState) => state.info,
+  userInfo: (state, getters, rootState) => state.userInfo
 }
 
 // actions
@@ -15,7 +16,7 @@ const actions = {
     // shop.getProducts(data => {
     //   commit('setUserInfo', data)
     // })
-    commit('setUserInfo', {name: '黎明'})
+    commit('setUserInfo', { name: '黎明' })
   }
 }
 

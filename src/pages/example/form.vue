@@ -177,9 +177,9 @@ export default {
     console.log(this.userInfo)
     this.formData = {
       ...this.formData,
-      nickName,
-      gender,
-      telNumber
+      nickName: nickName || '',
+      gender: gender || 0,
+      telNumber: telNumber || ''
     }
   },
   methods: {

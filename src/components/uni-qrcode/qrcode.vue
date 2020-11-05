@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import uQRCode from './uqrcode.js'
+import uQRCode from '@/utils/uqrcode.js'
 
 export default {
   props: {
@@ -23,7 +23,7 @@ export default {
     },
     size: {
       type: Number,
-      default: uni.upx2px(360)
+      default: uni.upx2px(590)
     },
     margin: {
       type: Number,
@@ -38,12 +38,10 @@ export default {
       default: '#000000'
     },
     backgroundImage: {
-      type: String,
-      default: ''
+      type: String
     },
     logo: {
-      type: String,
-      default: ''
+      type: String
     },
     makeOnLoad: {
       type: Boolean,
